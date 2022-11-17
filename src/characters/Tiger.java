@@ -2,7 +2,7 @@ package characters;
 
 import abilities.*;
 import enums.DayTime;
-import exceptions.PrintDescribeException;
+import exceptions.ChairException;
 
 public class Tiger extends Animal implements AbleToDoInstructions, Enjoyable, Speakable, AbleToBeNaughty, Disappearable {
     public Tiger(String name) {
@@ -81,7 +81,7 @@ public class Tiger extends Animal implements AbleToDoInstructions, Enjoyable, Sp
 
     public void bentDown(Object obj) {
         if (!(obj instanceof AbleToBeOwned)){
-            throw new PrintDescribeException("Нельзя наклоняться ни к чему, кроме кресла");
+            throw new ChairException("Нельзя наклоняться ни к чему, кроме кресла");
         }
         System.out.println(this.getName() + " наклонился над " + obj);
     }

@@ -4,7 +4,7 @@ import characters.*;
 import enums.DayTime;
 import enums.Priority;
 import exceptions.NameException;
-import exceptions.PrintDescribeException;
+import exceptions.ChairException;
 import items.Day;
 import items.Home;
 import items.Issue;
@@ -35,7 +35,7 @@ public class Main {
         chair.setOwner(ru);
         try {
             tigra.bentDown(chair);
-        } catch (PrintDescribeException e) {
+        } catch (ChairException e) {
             System.out.println("Тигра решил не наклоняться");
         }
         tigra.eat(DayTime.BREAKFAST);
